@@ -1,0 +1,92 @@
+:root {
+  color-scheme: dark;
+  --bg: #10131a;
+  --panel: #171b25;
+  --ink: #f2f6ff;
+  --accent: #43d9ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  background: radial-gradient(circle at top, #1d2536, var(--bg));
+  color: var(--ink);
+}
+
+.topbar {
+  max-width: 1200px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+}
+
+.topbar h1 {
+  margin: 0;
+  color: var(--accent);
+}
+
+.layout {
+  max-width: 1200px;
+  margin: 0 auto 1.5rem;
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.panel {
+  background: rgba(23, 27, 37, 0.9);
+  border: 1px solid #2a3040;
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.panel kbd {
+  background: #2a3040;
+  border-radius: 6px;
+  padding: 0.15rem 0.4rem;
+}
+
+button {
+  border: none;
+  background: linear-gradient(135deg, #43d9ff, #5c7cff);
+  color: #0b1020;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 0.6rem 0.9rem;
+  cursor: pointer;
+}
+
+.game-wrap {
+  position: relative;
+  border: 1px solid #2a3040;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #0d111a;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hud {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  background: rgba(10, 13, 22, 0.65);
+  border: 1px solid #2c3448;
+  border-radius: 10px;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
